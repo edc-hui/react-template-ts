@@ -1,0 +1,10 @@
+build/
+dist/
+tests/
+demo/
+coverage/
+node_modules/
+**/*-min.js
+**/*.min.js
+package-lock.json
+yarn.lock

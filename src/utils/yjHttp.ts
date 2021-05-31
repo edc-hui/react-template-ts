@@ -1,3 +1,5 @@
+/** @format */
+
 import axios from 'axios';
 import { Message } from '@alifd/next';
 // 此处是再次封装axios，目的是统一处理错误情况以及配置请求头，在使用yjHttp调用接口的时候，一旦调用失败或者任何错误情况，会直接返回false
@@ -7,7 +9,7 @@ const yjHttp = axios.create({
 
 // request 的拦截----自定义相关操作
 yjHttp.interceptors.request.use(
-  (config) => {
+  config => {
     if (sessionStorage.buildingToken && !config.headers.Authorization) {
       // 在使用yjHttp调用接口的时候，如果自己传了Authorization，那么就会使用自己传的Authorization，否则使用下面默认的
       config.headers.Authorization = sessionStorage.buildingToken;
@@ -15,7 +17,7 @@ yjHttp.interceptors.request.use(
 
     return config;
   },
-  (error) => {
+  error => {
     console.error('请求拦截的错误', error);
   },
 );
@@ -41,7 +43,7 @@ yjHttp.interceptors.response.use(
       return false;
     }
   },
-  (error) => {
+  error => {
     if (error.response && error.response.status === 401) {
       // 说明账号在别处登陆了，需要退出重新登录
       // Message.error('Token已过期,请重新登录！', 2);

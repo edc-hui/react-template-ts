@@ -1,3 +1,5 @@
+/** @format */
+
 declare module '*.module.scss' {
   const classes: { [key: string]: string };
   export default classes;
@@ -8,42 +10,42 @@ declare module '*.module.css' {
   export default classes;
 }
 
-declare module "*.css" {
+declare module '*.css' {
   const style: any;
-  export default style
+  export default style;
 }
 
-declare module "*.scss" {
+declare module '*.scss' {
   const style: any;
-  export default style
+  export default style;
 }
 
 declare module '*.svg' {
-  const path: string
-  export default path
+  const path: string;
+  export default path;
 }
 
 declare module '*.bmp' {
-  const path: string
-  export default path
+  const path: string;
+  export default path;
 }
 
 declare module '*.gif' {
-  const path: string
-  export default path
+  const path: string;
+  export default path;
 }
 
 declare module '*.jpg' {
-  const path: string
-  export default path
+  const path: string;
+  export default path;
 }
 
 declare module '*.jpeg' {
-  const path: string
-  export default path
+  const path: string;
+  export default path;
 }
 
 declare module '*.png' {
-  const path: string
-  export default path
+  const path: string;
+  export default path;
 }
