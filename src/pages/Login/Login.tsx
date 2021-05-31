@@ -1,21 +1,26 @@
 import React from "react";
 import "./Login.scss";
-import Header from "@/components/Header/Header";
 import {Button} from "@alifd/next";
+import {useHistory} from 'react-router-dom';
+import store from "@/store";
 
 const Login = () => {
-    console.log("哈哈哈哈111")
+    const [commonState, commonDispatchers] = store.useModel('commonModel');
+    const history = useHistory();
 
     const click = () => {
-        console.log("点击按钮了啊啊")
+        console.log(commonState,'哈哈哈')
+        commonDispatchers.setState({
+            systemName: '更改之后的系统名称',
+        })
+        return
+        history.push('/basic/home');
     }
 
     return (
-        <div>
+        <div className="Login">
             这是登录页面
-            <Header />
-
-            <Button onClick={click} type="primary">啊哈aaa哈哈</Button>
+            <Button onClick={click} type="primary">跳转至主页</Button>
         </div>
     )
 }

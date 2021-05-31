@@ -18,9 +18,17 @@ module.exports = merge(common, {
         port: 3000,
         hotOnly: true,
         host: 'localhost',
-        contentBase: path.join(PROJECT_PATH, './public'),
+        contentBase: path.join(PROJECT_PATH, 'dist'),
         stats: 'errors-only',
         clientLogLevel: 'silent',
-        noInfo: true
+        noInfo: true,
+        historyApiFallback: {
+            rewrites : [
+                {
+                    from: /.*/g,
+                    to: '/public/index.html'
+                }
+            ]
+        },
     }
 })
