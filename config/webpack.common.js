@@ -13,7 +13,8 @@ module.exports = {
         filename: "js/[name].[contenthash:8].js",
         path: path.join(PROJECT_PATH, 'dist'),
         clean: true,
-        assetModuleFilename: "images/[name].[contenthash:8].[ext]"
+        assetModuleFilename: "images/[name].[contenthash:8].[ext]",
+        publicPath: "/"
     },
     module: {
         rules: [
@@ -80,7 +81,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.join(PROJECT_PATH, 'public/index.html'),
             filename: "index.html",
-            publicPath: './'
+            publicPath: '/'
         }),
         new ForkTsCheckerWebpackPlugin({
             typescript: {
@@ -91,7 +92,6 @@ module.exports = {
             theme:THEME,
             libraryName: '@alifd/next',
             prependNormalizeCSS: true,
-
         })
     ],
     resolve: {

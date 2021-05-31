@@ -13,7 +13,7 @@ const Login = () => {
         commonDispatchers.setState({
             systemName: '更改之后的系统名称',
         })
-        return
+        // history.push('/basic');
         history.push('/basic/home');
     }
 

@@ -22,13 +22,6 @@ module.exports = merge(common, {
         stats: 'errors-only',
         clientLogLevel: 'silent',
         noInfo: true,
-        historyApiFallback: {
-            rewrites : [
-                {
-                    from: /.*/g,
-                    to: '/public/index.html'
-                }
-            ]
-        },
+        historyApiFallback: true,
     }
 })
