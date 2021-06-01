@@ -1,4 +1,10 @@
 .Login {
   width: 100%;
   height: 100%;
+  color:$theme;
+  > .Login-bg {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(rgba($a,$b,$c,.4), rgba(0,0,0,1));
+  }
 }

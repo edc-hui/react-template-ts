@@ -22,6 +22,9 @@ const Login = () => {
   return (
     <div className="Login">
       这是登录页面
+      <div className="Login-bg">
+        hahah
+      </div>
       <Button onClick={click} type="primary">
         跳转至主页
       </Button>

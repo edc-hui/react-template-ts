@@ -8,7 +8,7 @@ const { getStyleLoaders, getBabelLoaders } = require('./lib/utils');
 const { PROJECT_PATH, THEME } = require('./lib/constants');
 const { devDependencies } = require('../package.json');
 const ThemePlugin = require('@alifd/next-theme-webpack-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin');
+// const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   entry: path.join(PROJECT_PATH, 'src/index.tsx'),
@@ -102,12 +102,12 @@ module.exports = {
       libraryName: '@alifd/next',
       prependNormalizeCSS: true,
     }),
-    new ESLintPlugin({
-      exclude: '/node_modules/',
-      overrideConfigFile: path.join(PROJECT_PATH, '.eslintrc.js'), // 指定一个eslint的配置文件
-      extensions: ['.ts', '.tsx'],
-      failOnError: true,
-    }),
+    // new ESLintPlugin({
+    //   exclude: '/node_modules/',
+    //   overrideConfigFile: path.join(PROJECT_PATH, '.eslintrc.js'), // 指定一个eslint的配置文件
+    //   extensions: ['.ts', '.tsx'],
+    //   failOnError: true,
+    // }),
   ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
