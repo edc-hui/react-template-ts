@@ -23,7 +23,7 @@ const Login = () => {
     <div className="Login">
       这是登录页面
       <div className="Login-bg">
-        hahah
+        <div>hahah</div>
       </div>
       <Button onClick={click} type="primary">
         跳转至主页

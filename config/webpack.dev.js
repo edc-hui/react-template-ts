@@ -17,7 +17,6 @@ module.exports = merge(common, {
     port: 3000,
     hotOnly: true,
     host: 'localhost',
-    contentBase: path.join(PROJECT_PATH, 'dist'),
     stats: {
       modules: false,
       asset: false,

@@ -19,17 +19,6 @@ module.exports = merge(common, {
       filename: 'css/[name].[contenthash:8].css',
       chunkFilename: 'css/[name].[contenthash:8].chunk.css',
     }),
-    new CopyPlugin({
-      patterns: [
-        {
-          from: path.resolve(PROJECT_PATH, 'public'),
-          to: path.join(PROJECT_PATH, 'dist'),
-          globOptions: {
-            ignore: ['**/index.html'],
-          },
-        },
-      ],
-    }),
   ],
   optimization: {
     minimize: true,

@@ -5,6 +5,10 @@
   > .Login-bg {
     width: 200px;
     height: 200px;
-    background: linear-gradient(rgba($a,$b,$c,.4), rgba(0,0,0,1));
+    background: rgba(0,0,0,.6);
+    > div {
+      width: 100px;
+      height: 100px;
+    }
   }
 }

@@ -9,6 +9,7 @@ const { PROJECT_PATH, THEME } = require('./lib/constants');
 const { devDependencies } = require('../package.json');
 const ThemePlugin = require('@alifd/next-theme-webpack-plugin');
 // const ESLintPlugin = require('eslint-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: path.join(PROJECT_PATH, 'src/index.tsx'),
@@ -108,6 +109,17 @@ module.exports = {
     //   extensions: ['.ts', '.tsx'],
     //   failOnError: true,
     // }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(PROJECT_PATH, 'public'),
+          to: path.join(PROJECT_PATH, 'dist'),
+          globOptions: {
+            ignore: ['**/index.html'],
+          },
+        },
+      ],
+    }),
   ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
